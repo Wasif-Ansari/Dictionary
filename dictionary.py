@@ -25,7 +25,7 @@ entry = Entry(root,font=("Times New Roman", 15, "bold"))
 entry.grid(row=1,column=2)
 entry.place(x=10,y=10,width=600)
 
-buttons = Button(root , text="FIND MEANING")
+buttons = Button(root , text="FIND MEANING",command=find_meaning)
 buttons.grid(row=4 , column=2)
 buttons.place(x=225,y=45,width=150)
 
