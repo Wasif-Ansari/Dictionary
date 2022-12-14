@@ -6,6 +6,21 @@ root = Tk()
 root.title("DICTIONARY")
 root.geometry('610x500')
 
+
+def find_meaning():
+    word = entry.get()
+    dictionary = PyDictionary(word)
+    x = dictionary.meaning(word)
+    
+    for i in x:
+        n = len(x[i])
+        print(n)
+        ans=""
+        for m in range(n):
+            ans += str(x[i][m]) + "\n"
+        means.config(text=ans)
+            
+
 entry = Entry(root,font=("Times New Roman", 15, "bold"))
 entry.grid(row=1,column=2)
 entry.place(x=10,y=10,width=600)
